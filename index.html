@@ -3,225 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joaco · Diseñador Gráfico</title>
-  <meta name="description" content="Portfolio de Joaco, diseñador gráfico. Identidad visual, dirección de arte y diseño editorial con un enfoque minimalista." />
+  <title>JOACO — Diseñador gráfico · Buenos Aires</title>
+  <meta name="description" content="Joaco, diseñador gráfico de Buenos Aires. Branding crudo y urbano para gastronomía, música y skate." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===== Header / Nav ===== -->
-  <header class="site-header" id="top">
-    <a href="#top" class="brand" aria-label="Joaco, inicio">
-      Joaco<span class="brand-dot">.</span>
-    </a>
-
-    <nav class="nav" aria-label="Navegación principal">
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <a class="logo" href="#top">JOACO<span class="logo-r">®</span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
       <a href="#sobre">Sobre mí</a>
+      <a href="#hago">Lo que hago</a>
       <a href="#trabajo">Trabajo</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto" class="nav-cta">Contacto</a>
+      <a href="#contacto" class="btn-nav">Contacto</a>
     </nav>
-
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
     </button>
   </header>
 
-  <!-- ===== Mobile menu ===== -->
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="#sobre">Sobre mí</a>
+    <a href="#hago">Lo que hago</a>
     <a href="#trabajo">Trabajo</a>
-    <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
   </div>
 
   <main>
-    <!-- ===== Hero ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
-      <p class="eyebrow reveal">Diseñador gráfico · Identidad &amp; dirección de arte</p>
-      <h1 class="hero-title">
-        <span class="reveal">Diseño con</span>
-        <span class="reveal"><em>intención</em>, no</span>
-        <span class="reveal">con ruido.</span>
-      </h1>
-      <div class="hero-foot reveal">
-        <p>
-          Soy Joaco. Construyo identidades visuales claras y memorables
-          para marcas que prefieren decir lo justo, pero decirlo bien.
+      <div class="hero-badge"><span class="dot"></span> Disponible — buscando mis primeros clientes</div>
+      <h1 class="hero-title">Marcas<br />con<br /><span class="hl">calle.</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-sub">
+          Diseño gráfico y branding para <strong>gastronomía, música y skate</strong>.
+          Crudo, urbano y sin vueltas. Desde Buenos Aires.
         </p>
-        <a href="#trabajo" class="link-arrow">Ver trabajo seleccionado →</a>
+        <a href="#trabajo" class="btn-big">Ver trabajo ↓</a>
       </div>
+      <span class="hero-sticker">Bs As · ARG</span>
     </section>
 
-    <!-- ===== Marquee ===== -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Branding</span><span>•</span>
-        <span>Diseño editorial</span><span>•</span>
-        <span>Dirección de arte</span><span>•</span>
-        <span>Packaging</span><span>•</span>
-        <span>Tipografía</span><span>•</span>
-        <span>Identidad visual</span><span>•</span>
-        <span>Branding</span><span>•</span>
-        <span>Diseño editorial</span><span>•</span>
-        <span>Dirección de arte</span><span>•</span>
-        <span>Packaging</span><span>•</span>
-        <span>Tipografía</span><span>•</span>
-        <span>Identidad visual</span><span>•</span>
+    <!-- ===== TICKER ===== -->
+    <div class="ticker ticker--red" aria-hidden="true">
+      <div class="ticker-track">
+        <span>BRANDING</span><span class="star">✺</span>
+        <span>GASTRONOMÍA</span><span class="star">✺</span>
+        <span>MÚSICA</span><span class="star">✺</span>
+        <span>SKATE</span><span class="star">✺</span>
+        <span>IDENTIDAD VISUAL</span><span class="star">✺</span>
+        <span>PACKAGING</span><span class="star">✺</span>
+        <span>BRANDING</span><span class="star">✺</span>
+        <span>GASTRONOMÍA</span><span class="star">✺</span>
+        <span>MÚSICA</span><span class="star">✺</span>
+        <span>SKATE</span><span class="star">✺</span>
+        <span>IDENTIDAD VISUAL</span><span class="star">✺</span>
+        <span>PACKAGING</span><span class="star">✺</span>
       </div>
     </div>
 
-    <!-- ===== Sobre mí ===== -->
+    <!-- ===== SOBRE MÍ ===== -->
     <section class="about" id="sobre">
-      <p class="section-label reveal">(01) Sobre mí</p>
+      <span class="tag">// Sobre mí</span>
       <div class="about-grid">
-        <h2 class="reveal">
-          Diez años traduciendo ideas complejas en formas simples.
+        <h2 class="about-h reveal">
+          Diseño marcas para lo que me mueve.
         </h2>
-        <div class="about-text reveal">
+        <div class="about-body reveal">
           <p>
-            Trabajo en la intersección entre estrategia y estética. Cada
-            proyecto empieza con una pregunta —qué tiene que sentir alguien al
-            ver esta marca— y termina en un sistema visual coherente que
-            funciona en cualquier soporte.
+            Soy <strong>Joaco</strong>, diseñador gráfico y estudiante de diseño
+            y comunicación en Buenos Aires. Me dedico al branding para tres
+            mundos que conozco de adentro: la gastronomía, la música y el skate.
           </p>
           <p>
-            Minimalismo no es vacío: es decisión. Quito todo lo que sobra para
-            que lo esencial respire.
+            Mi estilo es urbano y crudo, con color y sin miedo. Nada de
+            minimalismo de plantilla: cada marca tiene que tener calle propia,
+            verse real y sonar como lo que es.
           </p>
-          <ul class="about-stats">
-            <li><strong>+120</strong><span>Proyectos entregados</span></li>
-            <li><strong>10</strong><span>Años de experiencia</span></li>
-            <li><strong>4</strong><span>Premios de diseño</span></li>
-          </ul>
+          <p>
+            Estoy arrancando y <strong>buscando mis primeros clientes</strong>.
+            Si tenés un proyecto con actitud, hablemos.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Trabajo ===== -->
+    <!-- ===== LO QUE HAGO ===== -->
+    <section class="hago" id="hago">
+      <span class="tag tag--light">// Lo que hago</span>
+      <div class="hago-list">
+        <article class="hago-item reveal">
+          <span class="hago-num">01</span>
+          <h3>Gastronomía</h3>
+          <p>Identidad, cartas, packaging y cartelería para bares, pizzerías y proyectos que quieren verse tan bien como dan de comer.</p>
+        </article>
+        <article class="hago-item reveal">
+          <span class="hago-num">02</span>
+          <h3>Música</h3>
+          <p>Arte de tapa, identidad de banda y contenido para artistas independientes. De la cumbia al trap, sin careta.</p>
+        </article>
+        <article class="hago-item reveal">
+          <span class="hago-num">03</span>
+          <h3>Skate</h3>
+          <p>Gráficas de tablas, indumentaria y marcas para la escena del skate y la calle. Hecho a mano, no de stock.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== TRABAJO ===== -->
     <section class="work" id="trabajo">
       <div class="work-head">
-        <p class="section-label reveal">(02) Trabajo seleccionado</p>
-        <h2 class="reveal">Una muestra de proyectos recientes.</h2>
+        <span class="tag">// Trabajo</span>
+        <h2 class="work-h reveal">Proyectos<br />seleccionados</h2>
+        <p class="work-note reveal">
+          Mientras sumo clientes reales, estos son <strong>proyectos conceptuales</strong>
+          que armé para mostrar cómo pienso una marca de punta a punta.
+        </p>
       </div>
 
-      <!-- Proyecto destacado -->
-      <article class="project-feature reveal">
-        <div class="feature-visual" aria-hidden="true">
-          <div class="feature-brand">
-            <span class="feature-brand-badge">est. 2026</span>
-            <span class="feature-brand-mark">NOI</span>
-            <span class="feature-brand-rule"></span>
-            <span class="feature-brand-sub">Café · Specialty</span>
-            <span class="feature-brand-loc">San Isidro</span>
-          </div>
+      <!-- 01 · NAFTA -->
+      <article class="project reveal">
+        <div class="project-cover cover--nafta" aria-hidden="true">
+          <span class="cover-kicker">EP · TANQUE LLENO</span>
+          <span class="cover-mark">NAFTA</span>
+          <span class="cover-super">SÚPER</span>
+          <span class="cover-badge">100% NAFTERO</span>
         </div>
-        <div class="feature-info">
-          <span class="feature-tag">Proyecto destacado</span>
-          <h3>NOI Café</h3>
-          <p class="feature-lead">
-            Café specialty en San Isidro. Identidad de marca minimalista en
-            negro y caramelo: un wordmark sobrio, sistema tipográfico cálido y
-            packaging que deja hablar al grano. Menos elementos, más carácter.
+        <div class="project-info">
+          <div class="project-top">
+            <span class="project-idx">01</span>
+            <span class="project-concept">Concepto</span>
+          </div>
+          <h3 class="project-name">NAFTA</h3>
+          <p class="project-cat">Banda de cumbia / trap · Identidad + arte de tapa · 2025</p>
+          <p class="project-brief">
+            <strong>El encargo:</strong> una banda del conurbano que mezcla cumbia
+            y trap necesitaba una identidad que pegue igual en una story de
+            Instagram que en un sticker pegado en un poste de la esquina.
           </p>
-          <ul class="feature-services">
-            <li>Identidad de marca</li>
-            <li>Packaging</li>
-            <li>Dirección de arte</li>
+          <ul class="project-tags">
+            <li>Logotipo</li><li>Arte de tapa EP</li><li>Plantillas redes</li><li>Merch &amp; stickers</li>
           </ul>
-          <span class="feature-year">2026</span>
         </div>
       </article>
 
-      <div class="work-grid">
-        <article class="project reveal" data-tone="a">
-          <div class="project-thumb"><span class="project-mark">A</span></div>
-          <div class="project-meta">
-            <h3>Atlas Café</h3>
-            <p>Identidad &amp; packaging</p>
-            <span class="project-year">2025</span>
+      <!-- 02 · LA MUZZA -->
+      <article class="project project--flip reveal">
+        <div class="project-cover cover--muzza" aria-hidden="true">
+          <span class="cover-kicker">PIZZA AL MOLDE · PALERMO</span>
+          <span class="cover-mark">LA<br />MUZZA</span>
+          <span class="cover-dot">🍕</span>
+          <span class="cover-badge cover-badge--green">DESDE 1 PORCIÓN</span>
+        </div>
+        <div class="project-info">
+          <div class="project-top">
+            <span class="project-idx">02</span>
+            <span class="project-concept">Concepto</span>
           </div>
-        </article>
+          <h3 class="project-name">La Muzza</h3>
+          <p class="project-cat">Pizzería · Palermo · Branding gastronómico · 2025</p>
+          <p class="project-brief">
+            <strong>El encargo:</strong> una pizzería de Palermo que hace pizza
+            de molde de barrio pero la sirve con onda. Querían algo porteño de
+            verdad, con identidad propia, lejos de cualquier cadena.
+          </p>
+          <ul class="project-tags">
+            <li>Naming</li><li>Identidad visual</li><li>Cartelería</li><li>Cajas de pizza</li><li>Carta &amp; redes</li>
+          </ul>
+        </div>
+      </article>
 
-        <article class="project reveal" data-tone="b">
-          <div class="project-thumb"><span class="project-mark">N</span></div>
-          <div class="project-meta">
-            <h3>Norte Estudio</h3>
-            <p>Branding &amp; web</p>
-            <span class="project-year">2025</span>
+      <!-- 03 · BALDÍO -->
+      <article class="project reveal">
+        <div class="project-cover cover--baldio" aria-hidden="true">
+          <span class="cover-kicker">SKATE CO. · BS AS</span>
+          <span class="cover-mark">BALDÍO</span>
+          <span class="cover-super cover-super--stroke">EST. 2024</span>
+          <span class="cover-badge cover-badge--black">DIY OR DIE</span>
+        </div>
+        <div class="project-info">
+          <div class="project-top">
+            <span class="project-idx">03</span>
+            <span class="project-concept">Concepto</span>
           </div>
-        </article>
-
-        <article class="project reveal" data-tone="c">
-          <div class="project-thumb"><span class="project-mark">M</span></div>
-          <div class="project-meta">
-            <h3>Revista Materia</h3>
-            <p>Diseño editorial</p>
-            <span class="project-year">2024</span>
-          </div>
-        </article>
-
-        <article class="project reveal" data-tone="d">
-          <div class="project-thumb"><span class="project-mark">S</span></div>
-          <div class="project-meta">
-            <h3>Solar Studio</h3>
-            <p>Dirección de arte</p>
-            <span class="project-year">2024</span>
-          </div>
-        </article>
-      </div>
+          <h3 class="project-name">Baldío</h3>
+          <p class="project-cat">Marca de skate argentina · Identidad + indumentaria · 2024</p>
+          <p class="project-brief">
+            <strong>El encargo:</strong> una marca independiente de tablas y ropa
+            hecha por skaters de Buenos Aires. Querían una identidad cruda, hecha
+            a mano, que no pareciera corporativa ni de molde.
+          </p>
+          <ul class="project-tags">
+            <li>Logotipo</li><li>Gráficas de tablas</li><li>Remeras</li><li>Stickers</li><li>Lookbook</li>
+          </ul>
+        </div>
+      </article>
     </section>
 
-    <!-- ===== Servicios ===== -->
-    <section class="services" id="servicios">
-      <p class="section-label reveal">(03) Servicios</p>
-      <div class="services-list">
-        <div class="service reveal">
-          <span class="service-num">01</span>
-          <h3>Identidad de marca</h3>
-          <p>Logotipo, sistema visual, paleta y guías de uso. La base sobre la que todo lo demás se sostiene.</p>
-        </div>
-        <div class="service reveal">
-          <span class="service-num">02</span>
-          <h3>Diseño editorial</h3>
-          <p>Revistas, libros, memorias y reportes. Tipografía y retícula al servicio de la lectura.</p>
-        </div>
-        <div class="service reveal">
-          <span class="service-num">03</span>
-          <h3>Dirección de arte</h3>
-          <p>Campañas, sesiones y piezas que mantienen una voz visual consistente de principio a fin.</p>
-        </div>
-        <div class="service reveal">
-          <span class="service-num">04</span>
-          <h3>Packaging</h3>
-          <p>Diseño de envases que destaca en el lineal sin gritar. Forma, material y mensaje en equilibrio.</p>
-        </div>
+    <!-- ===== TICKER 2 ===== -->
+    <div class="ticker ticker--green ticker--rev" aria-hidden="true">
+      <div class="ticker-track">
+        <span>¿ARMAMOS TU MARCA?</span><span class="star">●</span>
+        <span>ESCRIBIME</span><span class="star">●</span>
+        <span>BUENOS AIRES</span><span class="star">●</span>
+        <span>¿ARMAMOS TU MARCA?</span><span class="star">●</span>
+        <span>ESCRIBIME</span><span class="star">●</span>
+        <span>BUENOS AIRES</span><span class="star">●</span>
+        <span>¿ARMAMOS TU MARCA?</span><span class="star">●</span>
+        <span>ESCRIBIME</span><span class="star">●</span>
+        <span>BUENOS AIRES</span><span class="star">●</span>
       </div>
-    </section>
+    </div>
 
-    <!-- ===== Contacto ===== -->
+    <!-- ===== CONTACTO ===== -->
     <section class="contact" id="contacto">
-      <p class="section-label reveal">(04) Contacto</p>
-      <h2 class="contact-title reveal">
-        ¿Tenés un proyecto<br /><em>en mente?</em>
-      </h2>
-      <a href="mailto:hola@joaco.design" class="contact-mail reveal">hola@joaco.design</a>
+      <span class="tag tag--light">// Contacto</span>
+      <h2 class="contact-h reveal">¿Tenés una<br />marca para<br /><span class="hl-w">construir?</span></h2>
+      <p class="contact-sub reveal">Contame qué tenés en mente. Respondo rápido.</p>
+      <a href="mailto:hola@joaco.com.ar" class="contact-mail reveal">hola@joaco.com.ar</a>
       <div class="contact-links reveal">
-        <a href="#" target="_blank" rel="noopener">Behance</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">Behance ↗</a>
+        <a href="#" target="_blank" rel="noopener">WhatsApp ↗</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Joaco</span>
-    <span>Diseñado con intención.</span>
-    <a href="#top" class="to-top">Volver arriba ↑</a>
+  <footer class="footer">
+    <span class="footer-logo">JOACO<span class="logo-r">®</span></span>
+    <span>Diseñador gráfico · Buenos Aires, ARG</span>
+    <span>© <span id="year"></span> — Hecho con calle.</span>
+    <a href="#top" class="to-top">Arriba ↑</a>
   </footer>
 
   <script src="script.js"></script>

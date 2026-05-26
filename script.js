@@ -1,27 +1,27 @@
 // ============================================================
-//  Joaco · Portfolio — interacciones
+//  JOACO · Portfolio — interacciones
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ---- Menú móvil ---- */
-  const toggle = document.querySelector('.nav-toggle');
+  const burger = document.querySelector('.burger');
   const menu = document.getElementById('mobile-menu');
 
   const closeMenu = () => {
     menu.hidden = true;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Abrir menú');
     document.body.style.overflow = '';
   };
 
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
+  burger.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
     if (open) {
       closeMenu();
     } else {
       menu.hidden = false;
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', 'Cerrar menú');
+      burger.setAttribute('aria-expanded', 'true');
+      burger.setAttribute('aria-label', 'Cerrar menú');
       document.body.style.overflow = 'hidden';
     }
   });
@@ -30,12 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !menu.hidden) closeMenu();
   });
-
-  /* ---- Header con borde al hacer scroll ---- */
-  const header = document.querySelector('.site-header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ---- Scroll reveal ---- */
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -48,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       (entries) => {
         entries.forEach((entry, i) => {
           if (entry.isIntersecting) {
-            // pequeño escalonado entre hermanos visibles a la vez
-            setTimeout(() => entry.target.classList.add('in'), i * 70);
+            setTimeout(() => entry.target.classList.add('in'), i * 60);
             io.unobserve(entry.target);
           }
         });
