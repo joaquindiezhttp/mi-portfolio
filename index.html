@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joaco · Diseñador Gráfico</title>
+  <meta name="description" content="Portfolio de Joaco, diseñador gráfico. Identidad visual, dirección de arte y diseño editorial con un enfoque minimalista." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Joaco, inicio">
+      Joaco<span class="brand-dot">.</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#trabajo">Trabajo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== Mobile menu ===== -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <p class="eyebrow reveal">Diseñador gráfico · Identidad &amp; dirección de arte</p>
+      <h1 class="hero-title">
+        <span class="reveal">Diseño con</span>
+        <span class="reveal"><em>intención</em>, no</span>
+        <span class="reveal">con ruido.</span>
+      </h1>
+      <div class="hero-foot reveal">
+        <p>
+          Soy Joaco. Construyo identidades visuales claras y memorables
+          para marcas que prefieren decir lo justo, pero decirlo bien.
+        </p>
+        <a href="#trabajo" class="link-arrow">Ver trabajo seleccionado →</a>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Branding</span><span>•</span>
+        <span>Diseño editorial</span><span>•</span>
+        <span>Dirección de arte</span><span>•</span>
+        <span>Packaging</span><span>•</span>
+        <span>Tipografía</span><span>•</span>
+        <span>Identidad visual</span><span>•</span>
+        <span>Branding</span><span>•</span>
+        <span>Diseño editorial</span><span>•</span>
+        <span>Dirección de arte</span><span>•</span>
+        <span>Packaging</span><span>•</span>
+        <span>Tipografía</span><span>•</span>
+        <span>Identidad visual</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ===== Sobre mí ===== -->
+    <section class="about" id="sobre">
+      <p class="section-label reveal">(01) Sobre mí</p>
+      <div class="about-grid">
+        <h2 class="reveal">
+          Diez años traduciendo ideas complejas en formas simples.
+        </h2>
+        <div class="about-text reveal">
+          <p>
+            Trabajo en la intersección entre estrategia y estética. Cada
+            proyecto empieza con una pregunta —qué tiene que sentir alguien al
+            ver esta marca— y termina en un sistema visual coherente que
+            funciona en cualquier soporte.
+          </p>
+          <p>
+            Minimalismo no es vacío: es decisión. Quito todo lo que sobra para
+            que lo esencial respire.
+          </p>
+          <ul class="about-stats">
+            <li><strong>+120</strong><span>Proyectos entregados</span></li>
+            <li><strong>10</strong><span>Años de experiencia</span></li>
+            <li><strong>4</strong><span>Premios de diseño</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trabajo ===== -->
+    <section class="work" id="trabajo">
+      <div class="work-head">
+        <p class="section-label reveal">(02) Trabajo seleccionado</p>
+        <h2 class="reveal">Una muestra de proyectos recientes.</h2>
+      </div>
+
+      <!-- Proyecto destacado -->
+      <article class="project-feature reveal">
+        <div class="feature-visual" aria-hidden="true">
+          <div class="feature-brand">
+            <span class="feature-brand-badge">est. 2026</span>
+            <span class="feature-brand-mark">NOI</span>
+            <span class="feature-brand-rule"></span>
+            <span class="feature-brand-sub">Café · Specialty</span>
+            <span class="feature-brand-loc">San Isidro</span>
+          </div>
+        </div>
+        <div class="feature-info">
+          <span class="feature-tag">Proyecto destacado</span>
+          <h3>NOI Café</h3>
+          <p class="feature-lead">
+            Café specialty en San Isidro. Identidad de marca minimalista en
+            negro y caramelo: un wordmark sobrio, sistema tipográfico cálido y
+            packaging que deja hablar al grano. Menos elementos, más carácter.
+          </p>
+          <ul class="feature-services">
+            <li>Identidad de marca</li>
+            <li>Packaging</li>
+            <li>Dirección de arte</li>
+          </ul>
+          <span class="feature-year">2026</span>
+        </div>
+      </article>
+
+      <div class="work-grid">
+        <article class="project reveal" data-tone="a">
+          <div class="project-thumb"><span class="project-mark">A</span></div>
+          <div class="project-meta">
+            <h3>Atlas Café</h3>
+            <p>Identidad &amp; packaging</p>
+            <span class="project-year">2025</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tone="b">
+          <div class="project-thumb"><span class="project-mark">N</span></div>
+          <div class="project-meta">
+            <h3>Norte Estudio</h3>
+            <p>Branding &amp; web</p>
+            <span class="project-year">2025</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tone="c">
+          <div class="project-thumb"><span class="project-mark">M</span></div>
+          <div class="project-meta">
+            <h3>Revista Materia</h3>
+            <p>Diseño editorial</p>
+            <span class="project-year">2024</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tone="d">
+          <div class="project-thumb"><span class="project-mark">S</span></div>
+          <div class="project-meta">
+            <h3>Solar Studio</h3>
+            <p>Dirección de arte</p>
+            <span class="project-year">2024</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="services" id="servicios">
+      <p class="section-label reveal">(03) Servicios</p>
+      <div class="services-list">
+        <div class="service reveal">
+          <span class="service-num">01</span>
+          <h3>Identidad de marca</h3>
+          <p>Logotipo, sistema visual, paleta y guías de uso. La base sobre la que todo lo demás se sostiene.</p>
+        </div>
+        <div class="service reveal">
+          <span class="service-num">02</span>
+          <h3>Diseño editorial</h3>
+          <p>Revistas, libros, memorias y reportes. Tipografía y retícula al servicio de la lectura.</p>
+        </div>
+        <div class="service reveal">
+          <span class="service-num">03</span>
+          <h3>Dirección de arte</h3>
+          <p>Campañas, sesiones y piezas que mantienen una voz visual consistente de principio a fin.</p>
+        </div>
+        <div class="service reveal">
+          <span class="service-num">04</span>
+          <h3>Packaging</h3>
+          <p>Diseño de envases que destaca en el lineal sin gritar. Forma, material y mensaje en equilibrio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="contact" id="contacto">
+      <p class="section-label reveal">(04) Contacto</p>
+      <h2 class="contact-title reveal">
+        ¿Tenés un proyecto<br /><em>en mente?</em>
+      </h2>
+      <a href="mailto:hola@joaco.design" class="contact-mail reveal">hola@joaco.design</a>
+      <div class="contact-links reveal">
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Joaco</span>
+    <span>Diseñado con intención.</span>
+    <a href="#top" class="to-top">Volver arriba ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
