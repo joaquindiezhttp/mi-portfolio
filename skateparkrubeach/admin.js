@@ -1,5 +1,5 @@
 // ============================================================
-//  Skateparkrubeach · panel de gestión
+//  Skatepark Perubeach · panel de gestión
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {

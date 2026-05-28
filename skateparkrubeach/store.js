@@ -1,5 +1,5 @@
 // ============================================================
-//  Skateparkrubeach · capa de datos (API backend)
+//  Skatepark Perubeach · capa de datos (API backend)
 //  Compartida por index.html (alumnos) y admin.html (gestión).
 //
 //  Habla con el backend Express. Los datos ahora son COMPARTIDOS

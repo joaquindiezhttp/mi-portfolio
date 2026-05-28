@@ -1,4 +1,4 @@
-# Skateparkrubeach · Sistema de inscripción
+# Skatepark Perubeach · Sistema de inscripción
 
 Sistema web de inscripción a clases de skate. Estático (HTML/CSS/JS, sin build).
 Estilo urbano skate · negro, blanco y amarillo · Bebas Neue · mobile-first.

@@ -1,5 +1,5 @@
 // ============================================================
-//  Skateparkrubeach · página de alumnos
+//  Skatepark Perubeach · página de alumnos
 // ============================================================
 
 // ⚠️ Reemplazá por el WhatsApp REAL del skatepark: código de país +
