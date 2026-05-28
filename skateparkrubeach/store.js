@@ -11,7 +11,11 @@
 // ============================================================
 
 window.SPK = (() => {
-  const API = 'http://localhost:3000';
+  // Backend: localhost en desarrollo, Render en producción.
+  const API =
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? 'http://localhost:3000'
+      : 'https://skateparkrubeach-backend.onrender.com';
 
   const CATEGORIES = ['Iniciantes', 'Intermedios', 'Adultos', 'Avanzados'];
   const DAYS = ['Lunes', 'Miércoles', 'Jueves'];
