@@ -139,6 +139,9 @@ a { color: var(--yellow); }
 .inp input::placeholder { color: #5e5e5e; }
 .inp input:focus { outline: none; border-color: var(--yellow); }
 
+.check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-weight: 500; }
+.check input { width: 20px; height: 20px; accent-color: var(--yellow); cursor: pointer; }
+
 .form-error {
   background: rgba(255, 91, 91, 0.12);
   border-left: 4px solid var(--danger);

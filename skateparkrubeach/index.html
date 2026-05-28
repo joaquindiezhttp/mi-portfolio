@@ -86,6 +86,19 @@
         </label>
       </fieldset>
 
+      <!-- Membresía (opcional) -->
+      <fieldset class="field">
+        <legend>4 · Membresía (opcional)</legend>
+        <label class="check">
+          <input type="checkbox" id="membresia" name="membresia" />
+          <span>Quiero sumar membresía</span>
+        </label>
+        <label class="inp" id="precio-group" hidden>
+          <span>Precio de la membresía ($)</span>
+          <input type="number" id="precio" name="precio" min="0" step="100" inputmode="numeric" placeholder="Ej: 15000" />
+        </label>
+      </fieldset>
+
       <p class="form-error" id="error" role="alert" hidden></p>
 
       <button type="submit" class="btn-go">Generar inscripción →</button>

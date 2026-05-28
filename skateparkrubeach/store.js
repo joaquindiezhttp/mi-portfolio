@@ -75,6 +75,18 @@ window.SPK = (() => {
     await refresh();
   }
 
+  async function addMembership(inscripcionId, precio) {
+    const res = await fetch(`${API}/api/memberships`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ inscripcion_id: inscripcionId, precio }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'No se pudo guardar la membresía');
+    await refresh();
+    return data;
+  }
+
   return {
     API,
     CATEGORIES,
@@ -88,5 +100,6 @@ window.SPK = (() => {
     add,
     setPresent,
     remove,
+    addMembership,
   };
 })();

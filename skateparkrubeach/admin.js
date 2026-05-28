@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td data-label="Teléfono"><a href="tel:${escape(r.phone)}">${escape(r.phone)}</a></td>
           <td data-label="Categoría">${escape(r.category)}</td>
           <td data-label="Día">${escape(r.day)}</td>
+          <td data-label="Membresía">${r.membresia ? `$${Number(r.precio).toLocaleString('es-AR')}` : '—'}</td>
           <td data-label="Asistencia">
             <button class="att ${r.present ? 'att--on' : ''}" data-id="${r.id}" data-act="att">
               ${r.present ? 'Presente ✓' : 'Marcar'}
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = SPK.all();
     if (!list.length) return alert('No hay inscriptos para exportar.');
 
-    const head = ['Nombre', 'Teléfono', 'Categoría', 'Día', 'Asistencia', 'Inscripción'];
+    const head = ['Nombre', 'Teléfono', 'Categoría', 'Día', 'Membresía', 'Asistencia', 'Inscripción'];
     const cell = (v) => `"${String(v).replace(/"/g, '""')}"`;
     const lines = [head.join(',')].concat(
       list.map((r) =>
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
           r.phone,
           r.category,
           r.day,
+          r.membresia ? r.precio : 'No',
           r.present ? 'Presente' : 'Pendiente',
           new Date(r.createdAt).toLocaleString('es-AR'),
         ]

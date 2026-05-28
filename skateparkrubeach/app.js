@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const sDetail = document.getElementById('s-detail');
   const waLink = document.getElementById('wa-link');
   const resetBtn = document.getElementById('reset');
+  const membresiaChk = document.getElementById('membresia');
+  const precioGroup = document.getElementById('precio-group');
+  const precioInput = document.getElementById('precio');
 
   /* ---- Pintar cupos por categoría ---- */
   function paintSpots() {
@@ -48,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('input', clearError);
 
+  /* ---- Mostrar el precio solo si marca membresía ---- */
+  if (membresiaChk) {
+    membresiaChk.addEventListener('change', () => {
+      precioGroup.hidden = !membresiaChk.checked;
+      if (!membresiaChk.checked) precioInput.value = '';
+      clearError();
+    });
+  }
+
   /* ---- Cargar cupos desde el server ---- */
   (async () => {
     try {
@@ -73,22 +85,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!day) return showError('Elegí un día.');
     if (name.length < 2) return showError('Escribí tu nombre completo.');
     if (phone.replace(/\D/g, '').length < 6) return showError('Ingresá un teléfono válido.');
+
+    // Membresía opcional — validar el precio ANTES de inscribir
+    const wantsMembership = membresiaChk && membresiaChk.checked;
+    let precio = null;
+    if (wantsMembership) {
+      precio = Number(precioInput.value);
+      if (!Number.isFinite(precio) || precio <= 0) {
+        return showError('Ingresá un precio de membresía válido.');
+      }
+    }
+
     if (SPK.isFull(category)) {
       paintSpots();
       return showError(`La categoría ${category} está completa. Elegí otra.`);
     }
 
     // Guardar inscripción en el server
+    let created;
     try {
-      await SPK.add({ category, day, name, phone });
+      created = await SPK.add({ category, day, name, phone });
     } catch (err) {
       await SPK.refresh().catch(() => {});
       paintSpots();
       return showError(err.message || 'No se pudo guardar la inscripción.');
     }
 
-    // Mensaje de WhatsApp (texto exacto pedido)
-    const msg = `Hola! Quiero inscribirme a la clase de ${category} el ${day}. Mi nombre es ${name} y mi tel es ${phone}`;
+    // Membresía (si corresponde)
+    if (wantsMembership) {
+      try {
+        await SPK.addMembership(created.id, precio);
+      } catch (err) {
+        return showError(`Te inscribiste, pero falló la membresía: ${err.message || ''}`);
+      }
+    }
+
+    // Mensaje de WhatsApp (texto exacto pedido + membresía si hay)
+    let msg = `Hola! Quiero inscribirme a la clase de ${category} el ${day}. Mi nombre es ${name} y mi tel es ${phone}`;
+    if (wantsMembership) msg += ` (con membresía $${precio})`;
     const base = WHATSAPP_NUMBER
       ? `https://wa.me/${WHATSAPP_NUMBER}`
       : 'https://wa.me/';
@@ -105,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Reset ---- */
   resetBtn.addEventListener('click', async () => {
     form.reset();
+    if (precioGroup) precioGroup.hidden = true;
     try {
       await SPK.refresh();
     } catch {}
