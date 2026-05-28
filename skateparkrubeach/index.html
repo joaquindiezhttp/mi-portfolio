@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skateparkrubeach · Inscripción a clases</title>
+  <meta name="description" content="Inscribite a las clases de Skateparkrubeach. Lunes, miércoles y jueves de 17 a 21 hs." />
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stripe"></div>
+
+  <header class="hd">
+    <h1 class="hd-logo">SKATEPARK<span class="hd-logo-y">RUBEACH</span></h1>
+    <p class="hd-info">
+      Clases · <strong>Lun · Mié · Jue</strong> · <strong>17 a 21 hs</strong>
+    </p>
+  </header>
+
+  <main class="wrap">
+    <!-- ===== FORM ===== -->
+    <form id="form" class="card" novalidate>
+      <h2 class="sec-title">Inscribite a una clase</h2>
+
+      <!-- Categoría -->
+      <fieldset class="field">
+        <legend>1 · Elegí tu categoría</legend>
+        <div class="cat-grid" id="cat-grid">
+          <label class="cat-card">
+            <input type="radio" name="category" value="Iniciantes" />
+            <span class="cat-name">Iniciantes</span>
+            <span class="cat-spots" data-cat="Iniciantes">–</span>
+          </label>
+          <label class="cat-card">
+            <input type="radio" name="category" value="Intermedios" />
+            <span class="cat-name">Intermedios</span>
+            <span class="cat-spots" data-cat="Intermedios">–</span>
+          </label>
+          <label class="cat-card">
+            <input type="radio" name="category" value="Adultos" />
+            <span class="cat-name">Adultos</span>
+            <span class="cat-spots" data-cat="Adultos">–</span>
+          </label>
+          <label class="cat-card">
+            <input type="radio" name="category" value="Avanzados" />
+            <span class="cat-name">Avanzados</span>
+            <span class="cat-spots" data-cat="Avanzados">–</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Día -->
+      <fieldset class="field">
+        <legend>2 · Elegí el día</legend>
+        <div class="day-grid">
+          <label class="day-card">
+            <input type="radio" name="day" value="Lunes" />
+            <span>Lunes</span>
+          </label>
+          <label class="day-card">
+            <input type="radio" name="day" value="Miércoles" />
+            <span>Miércoles</span>
+          </label>
+          <label class="day-card">
+            <input type="radio" name="day" value="Jueves" />
+            <span>Jueves</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Datos -->
+      <fieldset class="field">
+        <legend>3 · Tus datos</legend>
+        <label class="inp">
+          <span>Nombre y apellido</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" />
+        </label>
+        <label class="inp">
+          <span>Teléfono</span>
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="11 5555 5555" />
+        </label>
+      </fieldset>
+
+      <p class="form-error" id="error" role="alert" hidden></p>
+
+      <button type="submit" class="btn-go">Generar inscripción →</button>
+    </form>
+
+    <!-- ===== SUCCESS ===== -->
+    <section class="card success" id="success" hidden>
+      <span class="success-tick">✓</span>
+      <h2 class="sec-title">¡Casi listo, <span id="s-name">crack</span>!</h2>
+      <p class="success-text">
+        Guardamos tu lugar en <strong id="s-detail">–</strong>.
+        Tocá el botón para <strong>confirmar por WhatsApp</strong> y listo.
+      </p>
+      <a id="wa-link" class="btn-wa" href="#" target="_blank" rel="noopener">
+        Confirmar por WhatsApp
+      </a>
+      <button type="button" class="btn-ghost" id="reset">Inscribir a otra persona</button>
+    </section>
+  </main>
+
+  <footer class="ft">
+    <span>Skateparkrubeach · Bs As</span>
+    <a href="admin.html">Panel de gestión</a>
+  </footer>
+
+  <script src="store.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skateparkrubeach · Panel de gestión</title>
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stripe"></div>
+
+  <header class="hd">
+    <h1 class="hd-logo">PANEL <span class="hd-logo-y">SKATEPARK</span></h1>
+    <p class="hd-info">Gestión de inscriptos · reemplaza el Excel</p>
+  </header>
+
+  <main class="wrap wrap--wide">
+    <!-- Resumen de cupos -->
+    <section class="totals" id="totals"></section>
+
+    <!-- Filtros -->
+    <div class="toolbar">
+      <label class="filter">
+        <span>Día</span>
+        <select id="f-day"><option value="">Todos</option></select>
+      </label>
+      <label class="filter">
+        <span>Categoría</span>
+        <select id="f-cat"><option value="">Todas</option></select>
+      </label>
+      <button type="button" class="btn-csv" id="export">Exportar CSV</button>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Categoría</th>
+            <th>Día</th>
+            <th>Asistencia</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p class="empty" id="empty" hidden>No hay inscriptos todavía.</p>
+    </div>
+
+    <p class="note">
+      Datos en vivo desde el <strong>backend</strong>, compartidos entre dispositivos.
+      Si no cargan, verificá que el servidor esté corriendo:
+      <code>cd ~/skateparkrubeach-backend &amp;&amp; node index.js</code>
+    </p>
+  </main>
+
+  <footer class="ft">
+    <span>Skateparkrubeach · Bs As</span>
+    <a href="index.html">← Inscripción</a>
+  </footer>
+
+  <script src="store.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
